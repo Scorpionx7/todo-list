@@ -27,6 +27,25 @@ public class TaskController {
         return ResponseEntity.status(HttpStatus.CREATED).body(newTask);
     }
 
+    @PutMapping("/{id}")
+    public ResponseEntity<Task> updateTask(@PathVariable Long id, @RequestBody Task updateTask){
+        return taskService.getTaskById(id)
+                .map(task -> {
+                    task.setDescription(updateTask.getDescription());
+                    task.setCreateAt(updateTask.getCreateAt());
+                    task.setStatus(updateTask.getStatus());
+                    Task updated = taskService.saveTask(task);
+                    return ResponseEntity.ok(updated);
+                })
+                .orElse(ResponseEntity.notFound().build());
+    }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Void> deleteTask(@PathVariable Long id){
+        taskService.deleteTaskById(id);
+        return ResponseEntity.noContent().build();
+    }
+
     @GetMapping
     @Operation(summary = "Obter todas as tarefas", description = "Retorna uma lista de todas as tarefas")
     public List<Task> getAllTasks(){

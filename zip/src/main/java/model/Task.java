@@ -28,17 +28,14 @@ public class Task  {
     @Column(nullable = false)
     private Status status;
 
-    public Task(Object o, String s, String completeTheBackendDevelopment, String nãoIniciado) {
-
-    }
-
     public Task(Long id, String title, String description, LocalDateTime createAt, Status status) {
         this.id = id;
         this.title = title;
         this.description = description;
-        this.createAt = createAt;
+        this.createAt = createAt != null ? createAt : LocalDateTime.now();
         this.status = status;
     }
+    public Task() {}
 
     public Long getId() {
         return id;
