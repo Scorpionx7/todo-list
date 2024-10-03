@@ -45,7 +45,7 @@ Certifique-se de que as portas necessárias estão livres (a API roda na porta 8
 
 ## Passo 4: Acessar a Aplicação
 
-- Após a execução bem-sucedida, a API estará disponível em: `http://localhost:8080/api/todos`. 
+- Após a execução bem-sucedida, a API estará disponível em: `http://localhost:8080/api/tarefas`. 
 
 ## Passo 5: Acessar a Documentação da API
 
