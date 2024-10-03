@@ -63,7 +63,7 @@ Certifique-se de que as portas necessárias estão livres (a API roda na porta 8
 ## Autora
 - Nome: Esther Rezende
 - Email: rezendealvesesther@gmail.com
-- LinkedIn: `https://linkedin.com/in/estherrezende`
+- LinkedIn: https://www.linkedin.com/in/estherrezende/
 
 ## Licença
 - Este projeto é licenciado sob a [MIT License](LICENSE).
