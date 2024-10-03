@@ -60,5 +60,3 @@ public class TaskController {
                 .orElse(ResponseEntity.notFound().build());
     }
 }
-// @Operation: Fornece detalhes como o resumo e a descrição do endpoint.
-// @Tag: Classifica os endpoints por categorias (neste caso, as APIs relacionadas ao To-Do List).

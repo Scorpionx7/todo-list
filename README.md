@@ -16,9 +16,9 @@ Antes de rodar a aplicação, certifique-se de que os seguintes itens estão ins
 A API utiliza o **SQL Server** como banco de dados. Certifique-se de que o serviço do SQL Server está em execução e que você tenha um banco de dados configurado com as seguintes credenciais (ajuste conforme necessário no arquivo `application.properties`):
 
 ```properties
-spring.datasource.url=jdbc:sqlserver://localhost:1433;databaseName=todo_db
-spring.datasource.username=seu_usuario
-spring.datasource.password=sua_senha
+spring.datasource.url=jdbc:sqlserver://sqlserver:1433;databaseName=todo_db
+spring.datasource.username=esther
+spring.datasource.password=avatim123
 spring.jpa.hibernate.ddl-auto=update
 spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.SQLServerDialect 
 ````
@@ -27,7 +27,7 @@ spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.SQLServerDialect
 
 ## Passo 1: Clonar o Repositório
 ```bash
-git clone https://github.com/seu-usuario/seu-repositorio.git
+git clone https://github.com/Scorpionx7/todo-list-backend.git
 ```
 ## Passo 2: Navegue até o diretório do projeto:
 ```bash
@@ -63,7 +63,7 @@ Certifique-se de que as portas necessárias estão livres (a API roda na porta 8
 ## Autora
 - Nome: Esther Rezende
 - Email: rezendealvesesther@gmail.com
-- LinkedIn: linkedin.com/in/estherrezende
+- LinkedIn: `https://linkedin.com/in/estherrezende`
 
 ## Licença
 - Este projeto é licenciado sob a [MIT License](LICENSE).

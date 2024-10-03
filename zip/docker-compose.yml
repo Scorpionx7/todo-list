@@ -1,12 +1,11 @@
 version: '3.8'
-
 services:
   sqlserver:
     image: mcr.microsoft.com/mssql/server:2022-latest
     container_name: sqlserver
     environment:
       - ACCEPT_EULA=Y
-      - SA_PASSWORD=YourPassword!123  # Defina uma senha forte
+      - SA_PASSWORD=YourPassword123
     ports:
       - "1433:1433"
     networks:
@@ -20,7 +19,7 @@ services:
     ports:
       - "8080:8080"
     environment:
-      - SPRING_DATASOURCE_URL=jdbc:sqlserver://192.168.1.5:1433;databaseName=todolist;encrypt=true;trustServerCertificate=true
+      - SPRING_DATASOURCE_URL=jdbc:sqlserver://sqlserver:1433;databaseName=todolist;encrypt=true;trustServerCertificate=true
       - SPRING_DATASOURCE_USERNAME=esther
       - SPRING_DATASOURCE_PASSWORD=avatim123
     depends_on:
@@ -30,8 +29,7 @@ services:
 
 networks:
   spring-network:
-    driver: bridge
 
 volumes:
   sqlserver-data:
-    driver: local
+

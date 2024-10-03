@@ -15,7 +15,7 @@ import static enums.Status.*;
 
 @Configuration
 @Profile("test")
-@RequiredArgsConstructor // Lombok irá gerar um construtor com os argumentos finais
+@RequiredArgsConstructor
 public class TaskConfig implements CommandLineRunner {
 
     private final TaskRepository taskRepository;
